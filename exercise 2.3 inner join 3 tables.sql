@@ -3,4 +3,5 @@ inner join client
 on client.id = sale.client_id
 inner join status
 on status.id = sale.status_id
-group by client.first_name, client.last_name;
+where status.name = "new"
+group by client.id;
